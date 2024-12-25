@@ -1,0 +1,118 @@
+body {
+  text-align: center;
+  background-color: #be8c6b;
+  color: white;
+}
+
+.info-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: #6d452a 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 999;
+  color: #6d452a;
+  text-align: right;
+}
+
+.accessibility-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.accessibility-btn:hover {
+  background-color: #cccccc;
+}
+
+.info-card button {
+  background-color: #be8c6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 9px;
+}
+
+.nav-clr {
+  background-color: #6d452a;
+}
+
+.nav-clr a {
+  color: white;
+}
+
+.page-start-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  gap: 50px;
+  color: #be8c6b;
+}
+
+.card button {
+  color: white;
+}
+
+.product-button {
+  border: none;
+  background-color: #be8c6b;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.product-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.card h3 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.pdf-button {
+  background-color: #6d452a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.card-img {
+  border: 4px #be8c6b solid;
+  border-radius: 12px;
+  width: 40%;
+  padding: 20px 33px;
+  max-height: 150px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.btn-clr {
+  background-color: #8f6041;
+  border: none;
+}
+
+.btn-clr:hover {
+  background-color: #6d452a;
+}

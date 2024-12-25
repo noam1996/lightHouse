@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>תמציות פרחי באך</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="info-card" id="info">
+    <p id="infoP">
+    </p>
+    <button id="infoCardClose">סגור</button>
+  </div>
+  <button onclick="changeFontColor()" class="accessibility-btn" aria-label="אפשרויות נגישות">
+    <img src="./images/accessibility.png" alt="סמל נגישות" width="30" height="30">
+  </button>
+  <nav class="navbar navbar-expand-lg navbar-light nav-clr">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">מגדלור</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="תפריט ניווט">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">מהי חרדה?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">פרחי באך</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">שיטות להרגעה</a>
+          </li>
+        </ul>
+      </div>
+      <img src="./assets/logo.png" alt="logo">
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="page-start-text">
+      <h1 class="text-center">תמציות פרחי באך למצבי דחק</h1>
+      <h4>
+        פרחי באך, תמציות טבעיות המופקות מפרחים, ידועות ביכולתן לסייע בהתמודדות עם מצבים רגשיים שונים, כולל חרדה, פחד,
+        לחץ וכו.
+        התמציות פועלות על הרמה האנרגטית, ומסייעות לאזן את הרגשות והמחשבות.
+      </h4>
+
+      <button id="downloadPdfButton" class="pdf-button">הורד PDF - מידע נוסף על צמחי באך</button>
+      <a id="hiddenPdfLink" href="./assets/pdf.pdf" download="file.pdf" style="display: none"></a>
+    </div>
+    <div class="d-flex justify-content-center my-4">
+      <input type="text" id="searchInput" class="form-control w-50 ms-2" placeholder="חפש..." />
+      <button id="searchButton" class="btn btn-primary btn-clr">חפש</button>
+    </div>
+
+    <div id="cardsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div id="product0" class="col">
+        <div class="card">
+          <img src="images/product0.png" class="card-img" alt="צ'רי פלאואר" />
+          <div class="card-text">
+            <h3 class="card-title">צ'רי פלאואר</h3>
+            <h3 class="card-title">Cherry Plum</h3>
+            <p class="card-text">שליטה עצמית</p>
+            <button onclick="showInfoCard(0)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product1" class="col">
+        <div class="card">
+          <img src="images/product1.png" class="card-img" alt="אימפיישנס" />
+          <div class="card-text">
+            <h3 class="card-title">אימפיישנס</h3>
+            <h3 class="card-title">Impatiens</h3>
+            <p class="card-text">חוסר סבלנות</p>
+            <button onclick="showInfoCard(1)" class="product-button">מידע נוסף</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col">
+        <div id="product2" class="card">
+          <img src="images/product2.png" class="card-img" alt="רוק רוז" />
+          <div class="card-text">
+            <h3 class="card-title">רוק רוז</h3>
+            <h3 class="card-title">Rock rose</h3>
+            <p class="card-text">פאניקה קיצונית</p>
+            <button onclick="showInfoCard(2)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div id="product3" class="card">
+          <img src="images/product3.png" class="card-img" alt="אספן" />
+          <div class="card-text">
+            <h3 class="card-title">אספן</h3>
+            <h3 class="card-title">Aspen</h3>
+            <p class="card-text">חרדות ופחדים</p>
+            <button onclick="showInfoCard(3)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product4" class="col">
+        <div class="card">
+          <img src="images/product4.png" class="card-img" alt="קלמטיס" />
+          <div class="card-text">
+            <h3 class="card-title">קלמטיס</h3>
+            <h3 class="card-title">Clematis</h3>
+            <p class="card-text">איזון</p>
+            <button onclick="showInfoCard(4)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product5" class="col">
+        <div class="card">
+          <img src="images/product5.png" class="card-img" alt="פרח הקוץ" />
+          <div class="card-text">
+            <h3 class="card-title">פרח הקוץ</h3>
+            <h3 class="card-title">Mimulus</h3>
+            <p class="card-text">חרדה ספציפית</p>
+            <button onclick="showInfoCard(5)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product6" class="col">
+        <div class="card">
+          <img src="images/product6.png" class="card-img" alt="וויט צ'סטנט" />
+          <div class="card-text">
+            <h3 class="card-title">וויט צ'סטנט</h3>
+            <h3 class="card-title">White Chestnut</h3>
+            <p class="card-text">מחשבות טורדניות</p>
+            <button onclick="showInfoCard(6)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product7" class="col">
+        <div class="card">
+          <img src="images/product7.png" class="card-img" alt="אלם" />
+          <div class="card-text">
+            <h3 class="card-title">אלם</h3>
+            <h3 class="card-title">Elm</h3>
+            <p class="card-text">עומס יתר</p>
+            <button onclick="showInfoCard(7)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product8" class="col">
+        <div class="card">
+          <img src="images/product8.png" class="card-img" alt="כוכב בית לחם" />
+          <div class="card-text">
+            <h3 class="card-title">כוכב בית לחם</h3>
+            <h3 class="card-title">Star of Bethlehem</h3>
+            <p class="card-text">שליטה דומיננטית</p>
+            <button onclick="showInfoCard(8)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="product9" class="col">
+        <div class="card">
+          <img src="images/product9.png" class="card-img" alt="וואלנט" />
+          <div class="card-text">
+            <h3 class="card-title">וואלנט</h3>
+            <h3 class="card-title">Walnut</h3>
+            <p class="card-text">שינויים בחיים</p>
+            <button onclick="showInfoCard(9)" class="product-button">מידע נוסף</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
